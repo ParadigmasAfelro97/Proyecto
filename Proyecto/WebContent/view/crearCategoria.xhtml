@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+	<ui:include src="/view/header.xhtml" />
+
+</h:head>
+<h:body>
+
+	<h:form id="form">
+		<p:growl id="msgs" />
+		<div align="center">
+			<h:panelGrid columns="1">
+				<p:panel header="Crear Cita" style="margin-bottom:20px">
+
+					<h:panelGrid columns="2" cellpadding="5">
+
+						<h:outputLabel value="ID :" for="txt_codigo"></h:outputLabel>
+						<p:inputText id="txt_codigo"
+							value="#{mantenimientoCategorias.categoria.codigo}"
+							required="true" />
+
+						<h:outputLabel value="Nombre :" for="txt_nombre"></h:outputLabel>
+						<p:inputText id="txt_nombre"
+							value="#{mantenimientoCategorias.categoria.nombre}"
+							required="true" />
+
+						<h:outputLabel value="Correo electronico :" for="txt_descripcion"></h:outputLabel>
+						<p:inputText id="txt_descripcion"
+							value="#{mantenimientoCategorias.categoria.descripcion}"
+							required="true" />
+
+
+					</h:panelGrid>
+					<div align="center">
+						<h:panelGrid columns="2">
+							<p:commandButton id="btn_reset" value="Limpiar" type="reset" />
+							<p:commandButton id="btn_add" value="Agregar" update="form"
+								action="#{mantenimientoCategorias.crearCategoria()}">
+
+							</p:commandButton>
+						</h:panelGrid>
+					</div>
+				</p:panel>
+			</h:panelGrid>
+		</div>
+
+		<p:outputPanel id="categorias">
+			<p:dataTable value="#{mantenimientoCategorias.categorias}"
+				var="categoria" id="categoriasTable" >
+
+				<p:column headerText="ID">
+					<h:outputText value="#{categoria.codigo}" />
+				</p:column>
+
+				<p:column headerText="Nombre">
+					<f:facet name="header">
+						<h:outputText value="Nombre" />
+					</f:facet>
+					<h:outputText value="#{categoria.nombre}" />
+				</p:column>
+
+				<p:column headerText="Correo electronico">
+					<f:facet name="header">
+						<h:outputText value="Descripcion" />
+					</f:facet>
+					<h:outputText value="#{categoria.descripcion}" />
+				</p:column>
+
+				<p:column headerText="Accion">
+					<p:commandLink value="Eliminar" update=":form:categorias"
+						process=":form:categorias"
+						action="#{mantenimientoCategorias.eliminarCategoria(categoria)}">
+						<p:confirm header="Confirmacion" message="Esta Seguro?"
+							icon="ui-icon-alert" />
+					</p:commandLink>
+				</p:column>
+
+			</p:dataTable>
+			<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+				<p:commandButton value="Si" type="button"
+					styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+				<p:commandButton value="No" type="button"
+					styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+			</p:confirmDialog>
+		</p:outputPanel>
+	</h:form>
+</h:body>
+</html>
+
