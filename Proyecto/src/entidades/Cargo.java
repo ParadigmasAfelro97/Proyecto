@@ -16,6 +16,7 @@ public class Cargo implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@Column(name="codigo") //La clase codigo esta buscando una columna codigo
 	private int codigo;
 
 	private String descripcion;

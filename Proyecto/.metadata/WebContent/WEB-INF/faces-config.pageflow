@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16036937295200" configfile="/Proyecto/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16036937295200" configfile="/Proyecto/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="view/modificarCita.xhtml" x="576" y="276" id="pf16048938000193" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16048943639344" inlinks="pf16048943639344" path="/view/modificarCita.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="view/crearCategoria.xhtml" id="pf16048943639345" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf16048943639356" inlinks="pf16048943639356" path="/view/crearCategoria.xhtml"/>
+  <links id="pf16048943639344" target="pf16048938000193" source="pf16048938000193" fromaction="consultaCat"/>
+  <links id="pf16048943639356" target="pf16048943639345" source="pf16048943639345" fromaction="crearCat"/>
+</pageflow:Pageflow>

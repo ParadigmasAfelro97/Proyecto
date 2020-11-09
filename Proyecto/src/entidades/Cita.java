@@ -14,6 +14,7 @@ public class Cita implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@Column(name="idcita")
 	private int idcita;
 
 	private String descripcion;

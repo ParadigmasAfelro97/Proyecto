@@ -29,7 +29,7 @@ public class MantenimientoCategorias {
 	}
 
 	public void modificarCategoria() {
-	
+		
 	}
 
 	public List<Categoria> getCategorias() {
