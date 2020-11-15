@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16036937295200" configfile="/Proyecto/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="view/modificarCita.xhtml" x="576" y="276" id="pf16048938000193" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16048943639344" inlinks="pf16048943639344" path="/view/modificarCita.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="view/crearCategoria.xhtml" id="pf16048943639345" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf16048943639356" inlinks="pf16048943639356" path="/view/crearCategoria.xhtml"/>
-  <links id="pf16048943639344" target="pf16048938000193" source="pf16048938000193" fromaction="consultaCat"/>
-  <links id="pf16048943639356" target="pf16048943639345" source="pf16048943639345" fromaction="crearCat"/>
+  <nodes xsi:type="pageflow:PFPage" name="view/crearCategoria.xhtml" x="303" y="202" id="pf16051914162792" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16051914737434 pf16054161852530" inlinks="pf16051914990655 pf16054161852531" path="/view/crearCategoria.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="view/modificarCita.xhtml" x="672" y="216" id="pf16051914162793" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16051914990655 pf16054161852532" inlinks="pf16051914737434 pf16054161852533" path="/view/modificarCita.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="view/consultarCita.xhtml" x="504" y="96" id="pf16054161852534" outlinks="pf16054161852533 pf16054161852531" inlinks="pf16054161852532 pf16054161852530" path="/view/consultarCita.xhtml"/>
+  <links id="pf16051914737434" target="pf16051914162793" source="pf16051914162792" fromaction="modificarCat"/>
+  <links id="pf16051914990655" target="pf16051914162792" source="pf16051914162793" fromaction="crearCat"/>
+  <links id="pf16054161852533" target="pf16051914162793" source="pf16054161852534" fromaction="modificarCat"/>
+  <links id="pf16054161852532" target="pf16054161852534" source="pf16051914162793" fromaction="consultaCat"/>
+  <links id="pf16054161852531" target="pf16051914162792" source="pf16054161852534" fromaction="crearCat"/>
+  <links id="pf16054161852530" target="pf16054161852534" source="pf16051914162792" fromaction="consultaCat"/>
 </pageflow:Pageflow>

@@ -13,8 +13,24 @@
 		<display-name>view/crearCategoria.xhtml</display-name>
 		<from-view-id>/view/crearCategoria.xhtml</from-view-id>
 		<navigation-case>
+			<from-action>modificarCat</from-action>
+			<to-view-id>/view/modificarCita.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>view/modificarCita.xhtml</display-name>
+		<from-view-id>/view/modificarCita.xhtml</from-view-id>
+		<navigation-case>
 			<from-action>crearCat</from-action>
 			<to-view-id>/view/crearCategoria.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>view/consultarCita.xhtml</display-name>
+		<from-view-id>/view/consultarCita.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>modificarCat</from-action>
+			<to-view-id>/view/modificarCita.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -22,7 +38,23 @@
 		<from-view-id>/view/modificarCita.xhtml</from-view-id>
 		<navigation-case>
 			<from-action>consultaCat</from-action>
-			<to-view-id>/view/modificarCita.xhtml</to-view-id>
+			<to-view-id>/view/consultarCita.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>view/consultarCita.xhtml</display-name>
+		<from-view-id>/view/consultarCita.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>crearCat</from-action>
+			<to-view-id>/view/crearCategoria.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>view/crearCategoria.xhtml</display-name>
+		<from-view-id>/view/crearCategoria.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>consultaCat</from-action>
+			<to-view-id>/view/consultarCita.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
