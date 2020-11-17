@@ -21,7 +21,7 @@ public class MantenimientoCategorias {
 
 		this.categorias = new ArrayList<Categoria>();
 		this.categoria = new Categoria();
-		crearCategoria();
+		//crearCategoria();
 	}
 
 	// Metodos Publicos
@@ -58,7 +58,7 @@ public class MantenimientoCategorias {
 					+ "values (?, ?, ?, ?, ?, ?) ";
 					
 			PreparedStatement preparedStmt = conn.prepareStatement(query);
-			preparedStmt.setInt (1, 4);
+			preparedStmt.setInt (1, 8);
 			preparedStmt.setInt (2, 1); 
 			preparedStmt.setInt (3, 1);
 			preparedStmt.setString(4, "String"); 
