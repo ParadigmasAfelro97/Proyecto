@@ -5,9 +5,15 @@ package model;
 public class Categoria {
 
 	private int codigo;
+	
+	private int estado;
+	
+	private int usuario;
 
 	private String descripcion;
 
+	private String medico;
+	
 	private String nombre;
 
 	public Categoria(String nombre, String descripcion) {
@@ -45,6 +51,30 @@ public class Categoria {
 	@Override
 	public String toString() {
 		return "Categoria [codigo=" + codigo + ", descripcion=" + descripcion + ", nombre=" + nombre + "]";
+	}
+
+	public int getEstado() {
+		return estado;
+	}
+
+	public void setEstado(int estado) {
+		this.estado = estado;
+	}
+
+	public int getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(int usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getMedico() {
+		return medico;
+	}
+
+	public void setMedico(String medico) {
+		this.medico = medico;
 	}
 	
 	

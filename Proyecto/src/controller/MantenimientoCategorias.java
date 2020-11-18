@@ -6,6 +6,9 @@ import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 //import com.mysql.jdbc.Connection;
 //import com.mysql.jdbc.PreparedStatement;
 
@@ -23,11 +26,13 @@ public class MantenimientoCategorias {
 		this.categoria = new Categoria();
 		//crearCategoria();
 	}
-
+	
+	
 	// Metodos Publicos
 	public void crearCategoria() {
 		this.categorias.add(this.categoria);
 		this.categoria = new Categoria();
+		
 
 		try {
 			// create a mysql database connection
@@ -58,7 +63,7 @@ public class MantenimientoCategorias {
 					+ "values (?, ?, ?, ?, ?, ?) ";
 					
 			PreparedStatement preparedStmt = conn.prepareStatement(query);
-			preparedStmt.setInt (1, 8);
+			preparedStmt.setInt (1, 1);
 			preparedStmt.setInt (2, 1); 
 			preparedStmt.setInt (3, 1);
 			preparedStmt.setString(4, "String"); 
